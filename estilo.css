@@ -1,0 +1,39 @@
+/* Poso: warm paper by day, warm dark by night, serif titles, no boxes. */
+:root {
+  --fondo: #faf7f2;
+  --tinta: #1c1915;
+  --suave: #736b62;
+  --linea: #e4ddd2;
+  --acento: #9a4528;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fondo: #14110f;
+    --tinta: #f0ebe3;
+    --suave: #9a9187;
+    --linea: #2a2520;
+    --acento: #e0906f;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--tinta);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+main { max-width: 700px; margin: 0 auto; padding: 32px 16px 48px; }
+header { margin-bottom: 28px; }
+header a { color: inherit; text-decoration: none; font: italic 26px/1 "Newsreader", Georgia, serif; }
+h1, h2 { font-family: "Newsreader", Georgia, serif; font-weight: 400; font-style: italic; }
+h1 { font-size: 34px; line-height: 1.15; margin: 0 0 4px; }
+h2 { font-size: 23px; margin: 36px 0 8px; }
+h3 { font-size: 17px; margin: 22px 0 6px; }
+.fecha, .nota { color: var(--suave); font-size: 14px; }
+a { color: var(--acento); }
+.tabla { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { text-align: left; vertical-align: top; padding: 8px 8px 8px 0; border-bottom: 1px solid var(--linea); }
+th { color: var(--suave); font-weight: 600; }
+footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--linea); color: var(--suave); font-size: 14px; }
